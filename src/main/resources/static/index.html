@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="//code.jquery.com/jquery-3.4.1.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Hei verden</title>
+</head>
+<body>
+
+<h2>Dette er lit bror</h2>
+Skriv inn navnet ditt plz man<input type="text" id="navn" />
+<button onclick="hallo()">Trykk her da maaan</button>
+<div id="ut"></div>
+
+<script type="application/javascript">
+    function hallo() {
+        const url = "/?navn=" + $("#navn").val();
+
+        $.get(url, function (data) {
+            $("#ut").html(data);
+        })
+    }
+
+</script>
+</body>
+</html>
